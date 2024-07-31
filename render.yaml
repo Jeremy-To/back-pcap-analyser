@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: app
+    env: python
+    buildCommand: |
+      pip install -r requirements.txt
+      apt-get update && apt-get install -y tshark
+    startCommand: python your_app_name.py
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.11.9
