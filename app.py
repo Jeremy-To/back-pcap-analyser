@@ -175,3 +175,6 @@ def analyze_pcap_route():
 if __name__ == '__main__':
     port = int(os.environ.get("PORT", 5000))
     app.run(host='0.0.0.0', port=port)
+else:
+    # This will be used when the app is run with Gunicorn
+    gunicorn_app = app
