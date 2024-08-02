@@ -17,7 +17,7 @@ CORS(app)
 # Constants
 CACHE_FILE = 'cache.json'
 # Replace with your actual API key
-API_KEY = "0765ae952c6095e2290871264f79d77ec56feb89b73b505a04dc3bdd3094717a"
+API_KEY = os.environ.get('API_SECRET')
 VT_API_URL = "https://www.virustotal.com/api/v3/"
 EXTRACTED_FILES_DIR = "extracted_files"
 HASHES_FILE = "extracted-hashes.txt"
